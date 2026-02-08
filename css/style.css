@@ -1,0 +1,48 @@
+
+body {
+  font-size: 16px; 
+}
+body {
+font-size: 1.05rem; 
+line-height: 1.8;
+}
+
+.date__title, 
+.date__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.date__title {
+    padding : 20px 0 10px ;
+}
+
+.date__title::before, .date__title::after {
+    content: "";
+    height: 5px;
+    width: 45%;
+    background-color: #ccc;
+}
+.date__title::before {
+    margin-right: 15px;
+}
+.date__title::after {
+    margin-left: 15px;
+}
+.date__list {
+display: flex;
+justify-content: center;
+gap: 50px;
+list-style: none;  
+margin-top: 20px;  
+}
+
+.date__list span {
+    display: inline-block;
+     font-size: 30px;
+     font-weight: 400;
+     padding-left: 10px;
+
+}
