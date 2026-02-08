@@ -1,5 +1,5 @@
 function animateCount(element) {
-    const target = parseInt(element.getAttribute('date__number'));
+    const target = parseInt(element.getAttribute('date-number'));
     let current = 0;
     const duration =1000;
     const startTime = performance.now();
@@ -23,7 +23,7 @@ function animateCount(element) {
     }
 
     document.addEventListener('DOMContentLoaded',() => {
-        const countElements = document.querySelectorAll('span[date__number]')
+        const countElements = document.querySelectorAll('span[date-number]')
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
@@ -32,10 +32,11 @@ function animateCount(element) {
                 }
             });
         }, {
-            threshold: 1.0
+            threshold: 0.5
         });
 
         countElements.forEach(element => {
             observer.observe(element);
         });
     });
+
