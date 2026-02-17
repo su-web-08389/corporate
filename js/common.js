@@ -32,7 +32,7 @@ function animateCount(element) {
                 }
             });
         }, {
-            threshold: 0.5
+            threshold: 1.0
         });
 
         countElements.forEach(element => {
@@ -40,3 +40,31 @@ function animateCount(element) {
         });
     });
 
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const fadeInItems = document.querySelectorAll('.fade-up');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold:0.2
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('is-show')
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        },observerOptions);
+
+        fadeInItems.forEach(item => {
+            observer.observe(item);
+        });
+    });
