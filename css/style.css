@@ -6,18 +6,35 @@ body {
     font-size: 1.05rem;
     line-height: 1.8;
 }
+
 section {
-     padding: 30px;
+    padding: 30px;
     max-width: 1260px;
     margin: 0 auto;
     padding: 0 4%;
-    
+
 }
+
 main .fv img {
     width: 100%;
     height: 500px;
     object-fit: cover;
-   
+    opacity: 0.7;
+}
+
+main .fv_text {
+
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+
+    position: fixed;
+    top: 200px;
+    left: 400px;
+    z-index: 50;
+}
+main .fv_text h2 {
+    font-size: 40px;
 }
 
 /*DATE*****************
@@ -27,7 +44,7 @@ main .fv img {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .date__title {
@@ -85,7 +102,7 @@ main .fv img {
 
 .vision__text {
     font-size: 1.5rem;
-    padding-bottom: 30px ;
+    padding-bottom: 30px;
 }
 
 .vision__inner {
@@ -114,14 +131,15 @@ main .fv img {
     padding: 0;
     margin: 0;
 }
-    .fade-up {
+
+.fade-up {
     /* 最初は隠しておく */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.fade-up.is-show{
+.fade-up.is-show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -161,6 +179,7 @@ main .fv img {
 .mission__text-group {
     flex: 1;
 }
+
 /*SERVICE*****************
          **************/
 .service__title {
@@ -172,32 +191,38 @@ main .fv img {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .service__list {
     gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     list-style: none;
-    
+
 }
+
 .service__item {
-   padding: 48px 24px;
- 
-   
+    padding: 48px 24px;
+
+
 }
+
 .service__image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
 }
+
 .service__name {
     margin: 10px 0;
 }
+
 .service__text {
-    
+
     line-height: 1.6;
-    
+
 }
+
 /*COMPANY PROFILE*****************
          **************/
 
@@ -241,10 +266,12 @@ main .fv img {
     max-width: 1200px;
     border-bottom: solid 3px #ccc;
 }
+
 .access__text {
-    margin: 20px 0; 
+    margin: 20px 0;
     font-weight: 500;
 }
+
 .google-map {
     margin: 20px 0;
     width: 100%;
