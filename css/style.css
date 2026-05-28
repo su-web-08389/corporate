@@ -28,11 +28,15 @@ main .fv_text {
     font-optical-sizing: auto;
     font-weight: 800;
 
-    position: fixed;
-    top: 200px;
-    left: 400px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 50;
+    text-align: center;
+    width: 100%;
 }
+
 main .fv_text h2 {
     font-size: 40px;
 }
