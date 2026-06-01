@@ -1,7 +1,7 @@
 function animateCount(element) {
     const target = parseInt(element.getAttribute('date-number'));
     let current = 0;
-    const duration =1000;
+    const duration = 1000;
     const startTime = performance.now();
 
     function update() {
@@ -14,57 +14,74 @@ function animateCount(element) {
 
         if (progress < 1) {
             requestAnimationFrame(update);
-        } else{
-                element.textContent = target.toLocaleString();
-            }
+        } else {
+            element.textContent = target.toLocaleString();
         }
-        
-        requestAnimationFrame(update);
     }
 
-    document.addEventListener('DOMContentLoaded',() => {
-        const countElements = document.querySelectorAll('span[date-number]')
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    animateCount(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 1.0
-        });
+    requestAnimationFrame(update);
+}
 
-        countElements.forEach(element => {
-            observer.observe(element);
+document.addEventListener('DOMContentLoaded', () => {
+    const countElements = document.querySelectorAll('span[date-number]')
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                observer.unobserve(entry.target);
+            }
         });
+    }, {
+        threshold: 1.0
     });
 
-
-
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const fadeInItems = document.querySelectorAll('.fade-up');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold:0.2
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add('is-show')
-
-                    observer.unobserve(entry.target);
-                }
-            });
-        },observerOptions);
-
-        fadeInItems.forEach(item => {
-            observer.observe(item);
-        });
+    countElements.forEach(element => {
+        observer.observe(element);
     });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeInItems = document.querySelectorAll('.fade-up');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add('is-show')
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    fadeInItems.forEach(item => {
+        observer.observe(item);
+    });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper(".swiper", {
+        loop: true,
+        speed: 2000,
+        slidesPerView: 1,
+        loopAdditionalSlides: 7, // ← 追加
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        }
+    });
+});

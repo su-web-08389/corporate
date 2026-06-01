@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+
     <!--リセットCSS-->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <!--オリジナルCSS-->
@@ -18,35 +23,55 @@
 </head>
 
 <body>
+    <!--------------------
+             header-------------------->
     <header class="header">
         <div class="header__inner">
             <h1>株式会社 WA MUSUBI</h1>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#">TOP</a></li>
-                    <li class="header__item"><a href="#vision">VISION</a></li>
-                    <li class="header__item"><a href="#mission">MISSION</a></li>
+                    <li class="header__item"><a href="#index.html">TOP</a></li>
+                    <li class="header__item"><a href="#vision,#mission">ABOUT</a></li>
                     <li class="header__item"><a href="#service">SERVICE</a></li>
-                    <li class="header__item"><a href="profile">PROFILE</a></li>
+                    <li class="header__item"><a href="#company">COMPANY</a></li>
+                    <li class="header__item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
+        <!--------------------
+             hero-------------------->
         <section class="hero">
-            <div class="fv">
-                <img src="img/fv-new1.png" alt="">
-            </div>
 
-            <div class="fv_text">
-                <h2>「日本の食」を世界へ。</h2>
-                <p>～ 素晴らしい食材を、価値ある体験として届ける。
-                    私たちは、食文化の未来をつなぎます ～</p>
-            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">1</div>
+                    <div class="swiper-slide">2</div>
+                    <div class="swiper-slide">3</div>
+                    <div class="swiper-slide">4</div>
+                    <div class="swiper-slide">5</div>
+                    <div class="swiper-slide">6</div>
+                    <div class="swiper-slide">7</div>
+                    <div class="swiper-slide">8</div>
+                    <div class="swiper-slide">9</div>
+                </div>
+</div>
+
+                <div class="fv_text">
+                    <h2>「日本の食」を世界へ。</h2>
+                    <p>～ 素晴らしい食材を、価値ある体験として届ける。
+                        私たちは、食文化の未来をつなぎます ～</p>
+                    <a href="#contact" class="fv_btn">お問い合わせ</a>
+                </div>
+            
         </section>
 
 
+        <!--------------------
+             DATE-------------------->
+        <section class="about"></section>
 
         <!--------------------
              DATE-------------------->
@@ -209,6 +234,8 @@
         </section>
     </main>
 
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 
