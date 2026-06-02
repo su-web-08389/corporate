@@ -26,6 +26,7 @@ section {
     max-width: 1260px;
     margin: 0 auto;
     padding: 0 4%;
+    margin-bottom: 100px;
 
 }
 
@@ -36,7 +37,7 @@ section {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.7);
     padding: 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
@@ -109,72 +110,67 @@ section {
 }
 
 /* ---------------------------
-   hero
+   HERO
 --------------------------- */
 
 .hero {
-    max-width: none; 
+    max-width: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     position: relative;
     display: flex;
-    
     align-items: center;
     justify-content: center;
+
 }
 
-
-
-
-/* ---------------------------
-   
---------------------------- */
+/* ---swiper--- */
 .swiper {
     width: 100%;
     height: 100vh;
-    
-    
 }
+
 .swiper-slide {
     background-size: cover;
     background-position: center;
     height: 100vh;
-   
-     
-    
+
 }
+
 .swiper-slide::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
+
 .swiper-slide:nth-child(1),
-.swiper-slide:nth-child(4), 
+.swiper-slide:nth-child(4),
 .swiper-slide:nth-child(7) {
     background-image: url('../img/fv-new1.jpg');
 }
+
 .swiper-slide:nth-child(2),
 .swiper-slide:nth-child(5),
-.swiper-slide:nth-child(8){
+.swiper-slide:nth-child(8) {
     background-image: url('../img/fv-new2.jpg');
 }
+
 .swiper-slide:nth-child(3),
 .swiper-slide:nth-child(6),
 .swiper-slide:nth-child(9) {
     background-image: url('../img/fv-new3.jpg');
 }
-/* ---------------------------
-  fv_text
---------------------------- */
-.fv_text {
+
+/* ---hero_text--- */
+.hero__text {
     font-family: "Noto Serif JP", serif;
     font-weight: 800;
     position: absolute;
-     top: 50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
@@ -182,18 +178,18 @@ section {
     color: #ffffff;
 }
 
-.fv_text h2 {
+.hero__text h2 {
     font-size: 40px;
     margin-bottom: 16px;
 }
 
-.fv_text p {
+.hero__text p {
     font-size: 16px;
     margin-bottom: 32px;
 }
 
-/* CTAボタン */
-.fv_btn {
+/* ---CTAボタン--- */
+.hero__btn {
     display: inline-block;
     padding: 14px 40px;
     border: 2px solid #ffffff;
@@ -204,16 +200,124 @@ section {
     transition: all 0.3s;
 }
 
-.fv_btn:hover {
+.hero__btn:hover {
     background: #ffffff;
     color: #333;
 }
-/******************
-         **************/
+
+/* ---------------------------
+   ABOUT
+--------------------------- */
+.about {
+    margin-top: 100px;
+}
+
+.about__title,
+.about__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__text {
+    padding-bottom: 50px;
+}
+
+.about__title::before,
+.about__title::after {
+    content: "";
+    height: 5px;
+    width: 50%;
+    background-color: #ccc;
+}
+
+.about__title::before {
+    margin-right: 15px;
+}
+
+.about__title::after {
+    margin-left: 15px;
+}
+
+/* ---about内容--- */
+
+.about__content {
+    display: flex;
+    align-items: center;
+}
+
+.about__img {
+    width: 40%;
+}
+
+.about__lead {
+    display: block;
+    text-align: center;
+    width: 60%;
+}
+
+.about__lead h3,
+.about__lead p {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 800;
+
+}
+
+.about__lead h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.about__lead p {
+    margin-bottom: 30px;
+}
+/* ---view moreボタン--- */
+.about__btn {
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    outline: none;
+    color: #333;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #333;
+    transition: color 0.5s ease;
+}
+
+.about__btn:hover {
+    color: #fff;
+}
+
+.about__btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.about__btn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all 0.5s ease;
+    transition-property: transform;
+}
+
+.about__btn--primary {
+    position: relative;
+}
 
 
-/*DATE*****************
-         **************/
+/* ---------------------------
+   DATE
+--------------------------- */
 .date__title,
 .date__text {
     display: flex;
