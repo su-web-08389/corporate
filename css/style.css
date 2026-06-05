@@ -243,17 +243,49 @@ section {
 
 .about__content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
+   min-height: 500px; 
 }
 
-.about__img {
-    width: 40%;
+.about__images {
+    width: 55%;
+      position: relative;
+    height: 700px; 
+;
+     
 }
+.about__img1 img,
+.about__img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 80%;
+}
+
+.about__img2 {
+    position: absolute;
+    bottom: 0;
+    top: 55%;
+    right: 10%;
+    width: 70%;
+    height: 35%;
+
+}
+
+
 
 .about__lead {
     display: block;
     text-align: center;
-    width: 60%;
+   margin-top: 80px;
 }
 
 .about__lead h3,
