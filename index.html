@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 
@@ -72,10 +77,10 @@
         <!--------------------
              ABOUT-------------------->
         <section class="about">
-            <h2 class="about__title">ABOUT</h2>
-            <p class="about__text">私たちについて</p>
+            <h2 class="section__title" id="about">ABOUT</h2>
 
-            <div class="about__content">
+
+            <div class="section__inner">
 
                 <div class="about__images">
                     <div class="about__img1">
@@ -83,19 +88,16 @@
                     </div>
 
                     <div class="about__img2">
-        <img src="img/about2.jpg" alt="">
-    </div>
+                        <img src="img/about2.jpg" alt="">
                     </div>
-
-  
-               
+                </div>
 
                 <div class="about__lead">
                     <h3>「日本の食」を 価値ある体験へ。</h3>
                     <p>飲食店づくりからブランド企画、人材育成まで。<br>
                         食の可能性を広げる事業を展開しています。
                     </p>
-                   
+
                     <a class="about__btn" href="#">
                         <span class="about__btn--primary">VIEW MORE</span>
                     </a>
@@ -104,17 +106,102 @@
         </section>
 
         <!--------------------
+             SERVICE-------------------->
+        <section class="service">
+            <h2 class="section__title" id="service">SERVICE</h2>
+
+            <div class="section__inner">
+
+                <ul class="service__list">
+                    <li class="service__item">
+                        <a href="#service" class="service__item1">
+                            <div class="service__image">
+                                <img src="img/service-1.jpg" alt="サービス内容1">
+                            </div>
+                            <h3 class="service__name">飲食店プロデュース</h3>
+                            <p class="service__text">店舗コンセプト設計からメニュー開発、運営サポートまで。
+                                食の価値が伝わる空間づくりを行います。</p>
+                        </a>
+                    </li>
+                    <li class="service__item">
+                        <a href="#service" class="service__item2">
+                            <div class="service__image">
+                                <img src="img/service-2.jpg" alt="サービス内容2">
+                            </div>
+                            <h3 class="service__name">食品ブランド企画</h3>
+                            <p class="service__text">食材選定から商品設計、ブランディングまで一貫して支援。
+                                想いのある食品を、選ばれるブランドへ。</p>
+                        </a>
+                    </li>
+                    <li class="service__item">
+                        <a href="#service" class="service__item3">
+                            <div class="service__image">
+                                <img src="img/service-3.jpg" alt="サービス内容3">
+                            </div>
+                            <h3 class="service__name">食育・人材育成プログラム</h3>
+                            <p class="service__text">プロの技術や食の知識を次世代へ伝える、食育・人材育成プログラムを展開。</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+        <!--------------------
              DATE-------------------->
 
         <section class="date">
             <h2 class="date__title">DATE</h2>
-            <p class="date__text">データセクション</p>
+
             <ul class="date__list">
                 <li class="date__item">店舗数<span date-number="20">0</span>店舗</li>
                 <li class="date__item">社員<span date-number="150">0</span>人</li>
                 <li class="date__item">設立<span date-number="10">0</span>年</li>
             </ul>
         </section>
+
+         <!--------------------
+             NEWS-------------------->
+        <section class="news">
+            <h2 class="section__title">NEWS</h2>
+
+            <div class="section__inner">
+
+              <ul class="news_list">
+              <li class="news_list_item">
+                <a href="">
+                  <div class="news_list_date">
+                    <time>2026.05.12</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>サイトリニューアルしました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="">
+                  <div class="news_list_date">
+                    <time>2026.05.12</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>記事が更新されました。記事が更新されました。記事が更新されました。記事が更新されました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+              <li class="news_list_item">
+                <a href="">
+                  <div class="news_list_date">
+                    <time>2026.05.12</time>
+                    <p class="news_item">お知らせ</p>
+                  </div>
+                  <p>サイトリニューアルしました。</p>
+                  <span class="arrow"></span>
+                </a>
+              </li>
+        </ul>
+    
+
+            </div>
+                </section>
 
 
         <!--------------------
@@ -161,44 +248,7 @@
                 </div>
             </div>
         </section>
-        <!--------------------
-             SERVICE-------------------->
-        <section class="service">
-            <h2 class="service__title">SERVICE</h2>
 
-            <div class="service__inner">
-
-                <ul class="service__list">
-
-                    <li class="service__item">
-                        <div class="service__image">
-                            <img src="img/service-1.jpg" alt="サービス内容1">
-                        </div>
-                        <h3 class="service__name">飲食店プロデュース</h3>
-                        <p class="service__text">店舗コンセプト設計からメニュー開発、運営サポートまで。
-                            食の価値が伝わる空間づくりを行います。</p>
-                    </li>
-                    <li class="service__item">
-                        <div class="service__image">
-                            <img src="img/service-2.jpg" alt="サービス内容2">
-                        </div>
-                        <h3 class="service__name">食品ブランド企画</h3>
-                        <p class="service__text">食材選定から商品設計、ブランディングまで一貫して支援。
-                            想いのある食品を、選ばれるブランドへ。</p>
-                    </li>
-                    <li class="service__item">
-                        <div class="service__image">
-                            <img src="img/service-3.jpg" alt="サービス内容3">
-                        </div>
-                        <h3 class="service__name">食育・人材育成プログラム</h3>
-                        <p class="service__text">プロの技術や食の知識を次世代へ伝える、食育・人材育成プログラムを展開。</p>
-                    </li>
-
-
-                </ul>
-
-            </div>
-        </section>
 
         <!--------------------
              COMPANY PROFILE-------------------->
