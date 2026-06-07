@@ -1,3 +1,11 @@
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('.header__nav');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('is-open');
+    nav.classList.toggle('is-open');
+});
+
 function animateCount(element) {
     const target = parseInt(element.getAttribute('date-number'));
     let current = 0;
