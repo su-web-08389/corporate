@@ -63,31 +63,23 @@ section {
     width: 100%;
     padding: 0 4%;
     margin: 0 auto;
-    padding: 0px 16px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .header__inner h1 {
-    max-width: 500px;
-    width: 100%;
     font-family: "Noto Serif JP", serif;
-    font-optical-sizing: auto;
     font-weight: 800;
     white-space: nowrap;
-
 }
-
-.header a {
-    padding: 16px;
-}
-
 
 /* ---ナビ--- */
 .header__list {
     display: flex;
-    gap: 32px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -103,10 +95,7 @@ section {
     opacity: 0.7;
 }
 
-@media screen and (max-width:1024px) {
-    .header__inner h1 {
-        margin-left: 50px;
-    }
+@media screen and (max-width:767px) {
 
     .hamburger {
         width: 50px;
@@ -130,15 +119,15 @@ section {
     }
 
     .hamburger span:nth-of-type(1) {
-        top: 16px;
+        top: 14px;
     }
 
     .hamburger span:nth-of-type(2) {
-        top: 25px;
+        top: 23px;
     }
 
     .hamburger span:nth-of-type(3) {
-        top: 34px;
+        top: 32px;
     }
 
     .header__nav {
