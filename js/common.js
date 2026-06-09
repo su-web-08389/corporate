@@ -6,6 +6,21 @@ hamburger.addEventListener('click', () => {
     nav.classList.toggle('is-open');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper(".swiper", {
+        loop: true,
+        speed: 2000,
+        slidesPerView: 1,
+        loopAdditionalSlides: 7, // ← 追加
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        }
+    });
+});
+
+
+
 function animateCount(element) {
     const target = parseInt(element.getAttribute('date-number'));
     let current = 0;

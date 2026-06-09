@@ -3,9 +3,16 @@
     padding: 0;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     font-size: 16px;
     line-height: 1.8;
+
 }
 
 a {
@@ -24,7 +31,6 @@ li {
 }
 
 section {
-    padding: 30px;
     max-width: 1260px;
     margin: 0 auto;
     padding: 0 4%;
@@ -33,8 +39,11 @@ section {
 }
 
 .section__title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
     border-bottom: solid 3px #ccc;
     margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 .section__inner {
@@ -42,38 +51,38 @@ section {
     align-items: flex-start;
 }
 
+@media screen and (max-width:1024px) {
+    .section__title {
+        font-size: 1.5rem;
+    }
+}
+
 /* ---------------------------
    header
 --------------------------- */
 .header {
-    width: 100%;
-    height: 100px;
     position: sticky;
     top: 0;
     z-index: 100;
     background: rgba(255, 255, 255, 0.7);
-    padding: 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-
-
 }
 
 .header__inner {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 4%;
+    max-width: 1260px;
+    padding: 16px 4%;
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .header__inner h1 {
     font-family: "Noto Serif JP", serif;
     font-weight: 800;
     white-space: nowrap;
+    font-size: 2rem;
 }
 
 /* ---ナビ--- */
@@ -84,7 +93,9 @@ section {
 }
 
 .header__item a {
-    font-size: 1rem;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
     color: #333;
     text-decoration: none;
     padding: 16px;
@@ -95,7 +106,7 @@ section {
     opacity: 0.7;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 1024px) {
 
     .hamburger {
         width: 50px;
@@ -175,8 +186,11 @@ section {
         transform: rotate(45deg);
     }
 
+    .header__inner h1 {
+        font-size: 1.8rem;
+        max-width: 550px;
+    }
 }
-
 
 /* ---------------------------
    HERO
@@ -248,12 +262,11 @@ section {
 }
 
 .hero__text h2 {
-    font-size: 40px;
+    font-size: 2rem;
     margin-bottom: 16px;
 }
 
 .hero__text p {
-    font-size: 16px;
     margin-bottom: 32px;
 }
 
@@ -272,6 +285,17 @@ section {
 .hero__btn:hover {
     background: #ffffff;
     color: #333;
+}
+
+@media screen and (max-width:1024px) {
+    .hero__text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero__text p {
+        font-size: 0.8rem;
+    }
+
 }
 
 /* ---------------------------
@@ -418,14 +442,19 @@ section {
 
 }
 
+@media screen and (max-width:1024px) {}
+
 /* ---------------------------
    DATE
 --------------------------- */
 .date__title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 .date__title::before,
@@ -458,6 +487,12 @@ section {
     font-weight: 700;
     padding-left: 10px;
     font-family: 'Playfair Display', serif;
+}
+
+@media screen and (max-width:1024px) {
+    .date__title {
+        font-size: 1.5rem;
+    }
 }
 
 /*NEWS*****************
@@ -589,10 +624,13 @@ section {
          **************/
 
 .contact__title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    font-size: 1.8rem;
 }
 
 .contact__title::before,
@@ -656,6 +694,12 @@ section {
     transform-origin: right;
     transition: all 0.5s ease;
     transition-property: transform;
+}
+
+@media screen and (max-width:1024px) {
+    .contact__title {
+        font-size: 1.5rem;
+    }
 }
 
 /*FOOOTER*****************
@@ -825,7 +869,7 @@ section {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .google-map {
         height: 60vw;
     }
